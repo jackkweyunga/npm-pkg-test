@@ -31,7 +31,7 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm semantic-release 
+      - run: npm run semantic-release 
 
   publish-gpr:
     needs: build
@@ -47,4 +47,4 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm semantic-release
+      - run: npm run semantic-release
