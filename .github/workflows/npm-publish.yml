@@ -4,8 +4,10 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: "*"
 
 jobs:
   build:
@@ -21,6 +23,7 @@ jobs:
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
+    if: ${{ github.ref ==  'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -28,13 +31,12 @@ jobs:
           node-version: 14
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: npm semantic-release 
 
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
+    if: ${{ github.ref ==  'refs/heads/main' }}
     permissions:
       contents: read
       packages: write
@@ -45,6 +47,4 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - run: npm semantic-release
