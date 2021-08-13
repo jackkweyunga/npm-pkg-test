@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "semantic-release": "semantic-release --branches main"
+    "semantic-release": "semantic-release --branches main",
+    "commit":"git cz"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,12 @@
   },
   "homepage": "https://github.com/jackkweyunga/npm-pkg-test#readme",
   "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
     "semantic-release": "^17.4.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
