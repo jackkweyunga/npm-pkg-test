@@ -1,0 +1,23 @@
+{
+  "name": "@jackkweyunga/npm-pkg-test",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackkweyunga/npm-pkg-test.git"
+  },
+  "author": "jackkweyunga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackkweyunga/npm-pkg-test/issues"
+  },
+  "homepage": "https://github.com/jackkweyunga/npm-pkg-test#readme",
+  "devDependencies": {
+    "semantic-release": "^17.4.4"
+  }
+}
