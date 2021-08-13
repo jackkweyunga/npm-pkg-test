@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "semantic-release": "semantic-release --branches main",
-    "commit":"git cz"
+    "commit": "git cz"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/jackkweyunga/npm-pkg-test#readme",
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0",
+    "jest": "^27.0.6",
     "semantic-release": "^17.4.4"
   },
   "config": {

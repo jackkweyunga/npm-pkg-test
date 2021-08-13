@@ -1,5 +1,6 @@
 const sayHellow = () => {
-    console.log("Hellow fro jek");
+    console.log("Hellow from jek");
+    return
 }
 
 module.exports = { sayHellow }
