@@ -1,5 +1,5 @@
 const sayHellow = () => {
-    console.log("Hellow from jek");
+    console.log("Hellow from npm");
     return
 }
 
